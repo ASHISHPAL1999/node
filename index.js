@@ -4,10 +4,11 @@ const nodemailer=require('nodemailer');
 const bcrypt=require('bcrypt')
 const crypto = require('crypto');
 var cors = require('cors')
+var dotenv=require("dotenv").config
 const app=express();
 const bodyParser = require('body-parser');
 const { PassThrough } = require('nodemailer/lib/xoauth2');
-const port=4000
+const port = process.env.PORT || 3500;
 //const bodyParserurlencoded=app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors());
